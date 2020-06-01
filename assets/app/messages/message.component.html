@@ -1,0 +1,27 @@
+<article class="panel panel-default" [ngStyle]="{backgroundColor: color, 'font-size.px': tam}">
+    <div class="panel-body">
+        {{ messageVarClasse.content }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            {{ messageVarClasse.username }}
+        </div>
+        <div class="config">
+            <div class="col-md-8.col-md-offset-2">
+                <form (ngSubmit)="onEdit(refLocalForm)" #refLocalForm="ngForm" ngNativeValidade>
+                    <div class="form-group">
+                        <label for="myContentngForm"></label>
+                        <input type="text"
+                               id="myContentngForm"
+                               class="form-control"
+                               ngModel
+                               name="myContentngForm"
+                               required>    
+                    </div>
+                    <button type="submit">Edit</button>
+                    <button type="submit" (click)="onDelete()">Delete</button>     
+                </form> 
+            </div>           
+        </div>
+        </footer>
+</article>
